@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Эпохион — политический сервер Minecraft на карте Земли</title>
+<meta name="description" content="Эпохион — политический сервер Майнкрафт на реальной карте Земли. Основывай нации, исследуй технологии от мечей до самолётов, воюй и заключай союзы.">
+<link rel="canonical" href="https://epohion.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Эпохион — политический сервер Minecraft">
+<meta property="og:description" content="Пустая карта Земли. Основывай нации, исследуй технологии, воюй и заключай союзы.">
+<meta property="og:image" content="https://epohion.com/img/og.png">
+<meta property="og:url" content="https://epohion.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACGElEQVR4Xs2Xv0oDQRDG74JFqiBpBG2CrdikFaxVbC19ArXzAdKlEVKIT2BpK2ptoZAijdiKFoo2h8TGLvItmcvc3Oze7EXEHwTvvL395t/uzqVJTSaPBxP+arp2ltaZyvySFKzCalClAbHCkipDggZI8dbmdT5/e2m1oJV9POX349ttd/31cu/+tnZGXh31gU9YivogY17PFwtDNEMachJNHMJyMvBwkrmfBGPxzsr+Z+HR+KpbKFxQMoCDkHOvuZjlWjOiVCP8H9z7kLiF9eN2Pgwp4RHkqcgjEBKfFxmJm95ynopSCqTnkmzQnHk2aJbufZARd8P3wpAF3FnWev7iRpIkw+kcuAb8nq6TWQo0EIWt3lvqaoAMqPL+N0A9XBx9u6lgQHAV/AUuBbFoax/wyrfS4Pm37nQ+djujSl2ugTqIigB5Dk81sf5hJ+knWVQkogwgIH753C15C3Hge64RZYDP83lo8POaH6k+4LnmvRWugWUYFQHCtwrq8L/2AXQylt0wtApC8F2QcClAHVjOA05oFVhA/jGukAL0cDi3fcXo64AsaN4XDOCrIWQErfMYpDh576IvJ+J9G3o6uT1jk8GOp8Frg1IUEi+lQKJFIrQH0A7oE9dQ23LZvVJ3y6PhO3ggTjVE5z7BQ08EP0zIEOqG9k5n7Vjow8QibDIA8AayDprXnMpvQyLWkCphcwR8SIOsgpIfOPYa5CBzAtgAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFDklEQVR4Xu3dMYsVVxgG4N2whdUi2wS0WdJKGtuAdQy2Kf0FiUUgP2A7GyFF8BdY2oZobaGwxTYhKSUWBtMsYW3sNoUSkjCfcOScnTm+z1Pevczce/e+nN2Xb87s7tDV+a/fnHc94P/sXru/O/L4aT5Je8PwbwJANAEgmgAQTQCIFtcojG5pZpfWMlkBiCYARBMAogkA0QSAaNO3QFqddc3eGlkBiCYARBMAogkA0QSAaNO0QKPbnv0bj7p8EQ4+/azLcSqnfz7vcvyzJzebjvP6xbOm5+9/dTLFd8sKQDQBIJoAEE0AiCYARFvtP/WttTqj25utaW2TXj64PPQtrNUaWQGIJgBEEwCiCQDRBIBow1ugtdqeqtX55d7p4i/88+8Phn4RqvNW1no91Xmr1mj2dsgKQDQBIJoAEE0AiCYARNub5d1XV2z1muHp1Q61tj2Vrb2e6nO+env5CrXR7VAvVgCiCQDRBIBoAkA0ASBat1mgXjM/a7U9vNVrBmn07FCvK8isAEQTAKIJANEEgGgCQLTmWaBZ2h7WNXp26PHRlfOld/jl0R9NzaYVgGgCQDQBIJoAEE0AiNbcArUaPdsz2ukPlxZPcfDdm6ZTV8ep9Dp+63FGa22HHt5p+5xbWQGIJgBEEwCiCQDRBIBoZQvUa+Zna54ev2p7SV8UTz9uO0x5nEqv47ceZ2fsLtmjtc4IWQGIJgBEEwCiCQDRBIBo5dUzrS3Q7DM/bFO1v1DrjFB1pZgVgGgCQDQBIJoAEE0AiCYARBMAogkA0QSAaAJANAEg2vB9gT5Wve4I30uve3ulsQIQTQCIJgBEEwCiCQDR9lqv/KpUu/5yMW4dniye6Kffr1/MCxik/l791nTGar8gKwDRBIBoAkA0ASCaABDNLNA7rbM91exN1caMdvfbw8VT3N05XXzc7NBbVgCiCQDRBIBoAkA0ASCaFugDbW32pmp7Klt7/WuxAhBNAIgmAEQTAKIJANG0QO9sbbaHi2EFIJoAEE0AiCYARBMAou3tXru/eLf41v2Cqjt6z75f0Oz76syu+l61cqd4WOBPIKIJANEEgGgCQDSzQB+odR8htskKQDQBIJoAEE0AiCYARBMAogkA0QSAaAJANAEgmgAQrdss0NmTm4sf5P6NR4uPz36l2Nb2EaruETaL6sqvh3feDH0LVgCiCQDRBIBoAkA0ASBa2QL12i8ozVr7CLXeI+xjVe3/U7ECEE0AiCYARBMAogkA0brNAr1+8Wzxg3z54PLi41dvP198fK0ZodZ9fqpZIN5vrZkfLRAs8CcQ0QSAaAJANAEgWnMLVM0Inf18/bzlk5ylHarcOjxZ/NFas0BbM7rtaZ350QKBFgj+y/8ARBMAogkA0RbvEt9TaztUuXr7r8UfjZ4dqtqere3D02ufotYWa5a2RwsEWiDQAsE//BNMNAEgWvMs0FrWmh2qWpGt7cMzejZpdNuzFisA0QSAaAJANAEgmgAQbfgsUKXXjFClmh2q9JopqtqYtVQtVtXqVEbfq6vXFV6trABEEwCiCQDRBIBoAkC01VqgVq2t0dPjV02n+PrHS03PH90mVVrbm7RWp5UVgGgCQDQBIJoAEE0AiDZNC1R5fHSlaVdq+lprhqcXKwDRBIBoAkA0ASCaABBt+haoldbo/WZvdVpZAYgmAEQTAKIJANEEgGhxLdBoo1umtJZmNCsA0QSAaAJANAEgmgAQ7W9Mqyq7DXERnwAAAABJRU5ErkJggg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"Эпохион","description":"Политический сервер Minecraft на карте Земли: нации, исследования технологий, войны и дипломатия.","genre":["Strategy","Sandbox"],"gamePlatform":"Minecraft Java Edition","inLanguage":"ru","url":"https://epohion.com/"}
+</script>
+<style>
+:root{--bg:#101218;--bg2:#161922;--card:#1c202c;--line:#2e3446;--gold:#f2b632;--gold2:#ffd56b;--text:#e8e9ee;--muted:#a3a8b8;--green:#5cb85c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+img.px{image-rendering:pixelated;image-rendering:crisp-edges}
+a{color:var(--gold)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.pix{font-family:'Press Start 2P',monospace;letter-spacing:1px;line-height:1.5}
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:rgba(16,18,24,.92);backdrop-filter:blur(6px);border-bottom:2px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--gold);font-size:14px}
+.brand img{width:36px;height:36px}
+.links{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+.links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+.links a:hover{color:var(--text)}
+/* hero */
+.hero{padding:56px 0 40px;text-align:center}
+.tag{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:2px solid var(--line);padding:8px 14px;font-size:10px;color:var(--text)}
+.tag img{width:20px;height:20px}
+.hero .logo{width:160px;height:160px;margin:26px auto 10px;display:block}
+h1{margin:0;font-size:clamp(28px,7vw,56px);color:var(--gold);text-shadow:4px 4px 0 #6b4a12}
+.sub{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:640px;margin:18px auto 28px}
+.ipbox{display:inline-flex;flex-wrap:wrap;align-items:stretch;border:3px solid var(--gold);background:var(--card)}
+.ipbox span{padding:14px 18px;font-size:13px;color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:0;cursor:pointer;font-family:'Press Start 2P',monospace;font-size:11px;text-decoration:none;background:var(--gold);color:#1a1300;box-shadow:inset -4px -4px 0 #b8801a,inset 4px 4px 0 var(--gold2)}
+.btn:hover{filter:brightness(1.08)}
+.btn.alt{background:#2b3245;color:var(--text);box-shadow:inset -4px -4px 0 #1a1f2c,inset 4px 4px 0 #3c4560}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.map{margin:44px auto 0;max-width:1000px;border:4px solid var(--line)}
+.map img{display:block;width:100%;height:auto}
+.mapcap{color:var(--muted);font-size:14px;margin-top:10px}
+/* sections */
+section{padding:64px 0;border-top:2px solid var(--line)}
+section:nth-of-type(even){background:var(--bg2)}
+h2{font-size:clamp(18px,3.4vw,26px);color:var(--gold);margin:0 0 10px;text-shadow:3px 3px 0 #6b4a12}
+.lead{color:var(--muted);margin:0 0 32px;max-width:700px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:3px solid var(--line);padding:22px}
+.card h3{margin:0 0 8px;font-size:19px}
+.card p{margin:0;color:var(--muted)}
+.card .ic{font-family:'Press Start 2P',monospace;color:var(--gold);font-size:12px;margin-bottom:12px;display:block}
+/* tech */
+.tech{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.node{display:flex;align-items:center;gap:14px;background:var(--card);border:3px solid var(--line);padding:14px 18px;min-width:180px;flex:1 1 180px}
+.node img{width:52px;height:52px;object-fit:contain}
+.node b{font-size:16px}
+.node.top{border-color:var(--gold)}
+.arrow{color:var(--gold);font-family:'Press Start 2P',monospace;font-size:14px}
+/* steps */
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+ol.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start;background:var(--card);border:3px solid var(--line);padding:16px 18px}
+ol.steps li::before{content:counter(s);font-family:'Press Start 2P',monospace;color:#1a1300;background:var(--gold);min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:14px}
+code{background:#0c0e13;border:1px solid var(--line);padding:2px 8px;color:var(--gold2)}
+/* roles */
+.roles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:24px}
+.role{background:var(--card);padding:16px 18px;border-left:8px solid var(--c);font-weight:800}
+details{background:var(--card);border:3px solid var(--line);padding:14px 18px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:800}
+details p{color:var(--muted);margin:10px 0 0}
+footer{border-top:2px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--gold);color:#1a1300;padding:12px 18px;font-weight:800;display:none}
+@media (max-width:640px){.links{display:none}.ipbox{width:100%}.ipbox span{flex:1 1 100%;text-align:center}.ipbox .btn{flex:1 1 100%}.arrow{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand pix" href="#top"><img class="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACGElEQVR4Xs2Xv0oDQRDG74JFqiBpBG2CrdikFaxVbC19ArXzAdKlEVKIT2BpK2ptoZAijdiKFoo2h8TGLvItmcvc3Oze7EXEHwTvvL395t/uzqVJTSaPBxP+arp2ltaZyvySFKzCalClAbHCkipDggZI8dbmdT5/e2m1oJV9POX349ttd/31cu/+tnZGXh31gU9YivogY17PFwtDNEMachJNHMJyMvBwkrmfBGPxzsr+Z+HR+KpbKFxQMoCDkHOvuZjlWjOiVCP8H9z7kLiF9eN2Pgwp4RHkqcgjEBKfFxmJm95ynopSCqTnkmzQnHk2aJbufZARd8P3wpAF3FnWev7iRpIkw+kcuAb8nq6TWQo0EIWt3lvqaoAMqPL+N0A9XBx9u6lgQHAV/AUuBbFoax/wyrfS4Pm37nQ+djujSl2ugTqIigB5Dk81sf5hJ+knWVQkogwgIH753C15C3Hge64RZYDP83lo8POaH6k+4LnmvRWugWUYFQHCtwrq8L/2AXQylt0wtApC8F2QcClAHVjOA05oFVhA/jGukAL0cDi3fcXo64AsaN4XDOCrIWQErfMYpDh576IvJ+J9G3o6uT1jk8GOp8Frg1IUEi+lQKJFIrQH0A7oE9dQ23LZvVJ3y6PhO3ggTjVE5z7BQ08EP0zIEOqG9k5n7Vjow8QibDIA8AayDprXnMpvQyLWkCphcwR8SIOsgpIfOPYa5CBzAtgAAAAASUVORK5CYII=" alt="">ЭПОХИОН</a>
+    <div class="links">
+      <a href="#features">Особенности</a>
+      <a href="#tech">Технологии</a>
+      <a id="mapnav" href="#">Карта</a>
+      <a href="#join">Как зайти</a>
+      <a href="#team">Набор</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="tag pix"><img class="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAVklEQVR4XmOMW2H3nwEPYALJyciIoChB5oMVPHnyBkUQxIdpZNLY9gfM4Zn1Am4KshhjW5wVhhsevfjAICchANYAtgIkgAxgknAFyALoisEm4NINUgwAJ+Ed1yTMcCEAAAAASUVORK5CYII=" alt="">СЕРВЕР В MINECRAFT</span>
+    <img class="logo px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACGElEQVR4Xs2Xv0oDQRDG74JFqiBpBG2CrdikFaxVbC19ArXzAdKlEVKIT2BpK2ptoZAijdiKFoo2h8TGLvItmcvc3Oze7EXEHwTvvL395t/uzqVJTSaPBxP+arp2ltaZyvySFKzCalClAbHCkipDggZI8dbmdT5/e2m1oJV9POX349ttd/31cu/+tnZGXh31gU9YivogY17PFwtDNEMachJNHMJyMvBwkrmfBGPxzsr+Z+HR+KpbKFxQMoCDkHOvuZjlWjOiVCP8H9z7kLiF9eN2Pgwp4RHkqcgjEBKfFxmJm95ynopSCqTnkmzQnHk2aJbufZARd8P3wpAF3FnWev7iRpIkw+kcuAb8nq6TWQo0EIWt3lvqaoAMqPL+N0A9XBx9u6lgQHAV/AUuBbFoax/wyrfS4Pm37nQ+djujSl2ugTqIigB5Dk81sf5hJ+knWVQkogwgIH753C15C3Hge64RZYDP83lo8POaH6k+4LnmvRWugWUYFQHCtwrq8L/2AXQylt0wtApC8F2QcClAHVjOA05oFVhA/jGukAL0cDi3fcXo64AsaN4XDOCrIWQErfMYpDh576IvJ+J9G3o6uT1jk8GOp8Frg1IUEi+lQKJFIrQH0A7oE9dQ23LZvVJ3y6PhO3ggTjVE5z7BQ08EP0zIEOqG9k5n7Vjow8QibDIA8AayDprXnMpvQyLWkCphcwR8SIOsgpIfOPYa5CBzAtgAAAAASUVORK5CYII=" alt="Логотип сервера Эпохион">
+    <h1 class="pix">ЭПОХИОН</h1>
+    <p class="sub">Политический сервер Minecraft на карте Земли. Основывай нации, исследуй технологии, воюй и заключай союзы.</p>
+    <div class="ipbox">
+      <span class="pix" id="ip">play.epohion.com</span>
+      <button class="btn" type="button" id="copy">Скопировать IP</button>
+    </div>
+    <div class="cta">
+      <a class="btn alt" id="discord" href="#">Discord</a>
+      <a class="btn alt" id="telegram" href="#">Telegram</a>
+      <a class="btn alt" id="mapbtn" href="#">Карта мира</a>
+    </div>
+    <div class="map"><img class="px" src="data:image/png;base64,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" width="1200" height="480" alt="Пиксельная карта Земли с территориями наций игроков"></div>
+    <p class="mapcap">Пустая карта Земли. Каждая граница на ней — дело рук игроков.</p>
+  </div>
+</header>
+
+<main>
+<section id="features">
+  <div class="wrap">
+    <h2 class="pix">ОСОБЕННОСТИ</h2>
+    <p class="lead">Эпохион — это не просто выживание. Здесь история мира пишется игроками.</p>
+    <div class="grid">
+      <div class="card"><span class="ic">01</span><h3>Реальная карта Земли</h3><p>Основывай город там, где хочешь: в Европе, Азии или посреди Сахары. Мир начинается пустым.</p></div>
+      <div class="card"><span class="ic">02</span><h3>Нации и города</h3><p>Создавай город, объединяйся в нацию, собирай налоги и расширяй границы.</p></div>
+      <div class="card"><span class="ic">03</span><h3>Исследования</h3><p>Технологии открывает нация: от мечей до самолётов. Кто изучит первым — получит преимущество.</p></div>
+      <div class="card"><span class="ic">04</span><h3>Войны и дипломатия</h3><p>Объявляй войны, заключай союзы и торговые договоры. Предательство — тоже часть игры.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tech">
+  <div class="wrap">
+    <h2 class="pix">ДЕРЕВО ТЕХНОЛОГИЙ</h2>
+    <p class="lead">Пока нация не изучила технологию, её жители не могут её использовать. Кто первым дойдёт до авиации — тот диктует условия.</p>
+    <div class="tech">
+      <div class="node"><img class="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAZUlEQVR4XmNkIAE8e/n+P0g5E7F6QBq27NhHrHIGsIZZC9f+h9lEEAwCDU4RBuBQgQGinQTTSLQGGABpJCaUUOLJ4tM3hhXbmxmkxAUZCQYrCFR5qcH9he5HrABZA1GAZA0MDAwA9NRfuB4k4agAAAAASUVORK5CYII=" alt=""><b>Мечи</b></div><span class="arrow">→</span>
+      <div class="node"><img class="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAYAAABv7tTEAAAASElEQVR4XmNkQANVXmr/0cXatt1iRBeDA2waQACXOG4JKEDWyIJs7bOX7zGcBgNTEs1xuhAO8BnARFg7CSDKSg6nU8myiX6aALo0FglAZeJkAAAAAElFTkSuQmCC" alt=""><b>Арбалеты</b></div><span class="arrow">→</span>
+      <div class="node"><img class="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAATUlEQVR4XmOMikr4z0AiYAGpd3D3JUrbgZ2bwerAmmAcYgEjIYXozl+2bAEjEyFNYPBgHwRDAUFNIJPRDSaoCRsgStOyY48YGRSc4PoB0GQTLG6S2roAAAAASUVORK5CYII=" alt=""><b>Огнестрел</b></div><span class="arrow">→</span>
+      <div class="node"><img class="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAHCAYAAADTcMcaAAAAT0lEQVR4XmNkQAMJNS7/0cUWtOxhRBZD4WDTAAK/7smgmMOCbio2sGzZAkybnCIMMJyEC+xbcYGRkRQNMMAEYjy78APMJ5YGu5UU20DOAwANhyPpNH7zXAAAAABJRU5ErkJggg==" alt=""><b>Танки</b></div><span class="arrow">→</span>
+      <div class="node top"><img class="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAAQElEQVR4XmNgwAFmLVz7H5ccEy4JfACrJpgtuGxjxCWBDzDCJInRnBYfDFYP14QMkA2AKSQK4LMZwyZsitFtAwCNiRqMbXwzKQAAAABJRU5ErkJggg==" alt=""><b>Самолёты</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <h2 class="pix">КАК ЗАЙТИ</h2>
+    <p class="lead">Нужен Minecraft: Java Edition.</p>
+    <ol class="steps">
+      <li><div>Открой Minecraft и выбери <b>«Сетевая игра»</b>.</div></li>
+      <li><div>Нажми <b>«Добавить сервер»</b> и вставь адрес <code id="ip2">play.epohion.com</code>.</div></li>
+      <li><div>Заходи, создай нацию или вступи в существующую. Правила — в нашем Discord.</div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <h2 class="pix">НАБОР В КОМАНДУ</h2>
+    <p class="lead">Хочешь делать сервер вместе с нами? Ищем людей в стафф.</p>
+    <div class="roles">
+      <div class="role" style="--c:#c8303a">Модераторы</div>
+      <div class="role" style="--c:#2e9e5b">Строители</div>
+      <div class="role" style="--c:#2f6fd1">Монтажёры</div>
+      <div class="role" style="--c:#7b3fb0">Блогеры</div>
+    </div>
+    <a class="btn" id="telegram2" href="#">Написать в Telegram</a>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2 class="pix">FAQ</h2>
+    <details><summary>Что такое политический сервер Minecraft?</summary><p>Это сервер, где главное — не просто выживание, а государства игроков: территории, войны, союзы и дипломатия.</p></details>
+    <details><summary>Нужно ли платить за игру на сервере?</summary><p>Нет, вход на сервер бесплатный. Нужна только лицензионная Minecraft: Java Edition.</p></details>
+    <details><summary>Можно ли играть одному?</summary><p>Да. Можно основать свой город или вступить в нацию других игроков.</p></details>
+    <details><summary>Какая версия Minecraft нужна?</summary><p>Актуальная версия указана в нашем Discord.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="pix" style="color:var(--gold);font-size:12px">ЭПОХИОН</p>
+    <p>Эпохион не связан с Mojang AB и Microsoft. Minecraft — торговая марка Mojang AB.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status">IP скопирован!</div>
+
+<script>
+// ====== НАСТРОЙКИ: впиши свои данные ======
+const CONFIG = {
+  ip: "play.epohion.com",
+  discord: "https://discord.gg/ТВОЙ-КОД",
+  telegram: "https://t.me/kallsher",
+  map: "https://map.epohion.com"
+};
+// ==========================================
+document.getElementById('ip').textContent = CONFIG.ip;
+document.getElementById('ip2').textContent = CONFIG.ip;
+document.getElementById('discord').href = CONFIG.discord;
+['telegram','telegram2'].forEach(id => document.getElementById(id).href = CONFIG.telegram);
+['mapnav','mapbtn'].forEach(id => { const a = document.getElementById(id); a.href = CONFIG.map; a.target = '_blank'; a.rel = 'noopener'; });
+document.getElementById('copy').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(CONFIG.ip); } catch (e) {}
+  const t = document.getElementById('toast');
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 1600);
+});
+</script>
+</body>
+</html>
